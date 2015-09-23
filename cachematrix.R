@@ -41,13 +41,13 @@ cacheSolve <- function(x, ...) {
   m
   }
 ## HOW THE SOLUTION COMES TOGETHER
-## First time we run commond like:
+## First time we run command like:
 ##> a <- makeCacheMatrix (matrix(6:9, nrow = 2, ncol = 2))
 ## m is programatically set to null. When cacheSolve(a) is called the inverse is calculated
-## This inverse is now stored in m. Everytime now when we call cacheSolve(a) the inverse stored 
+## This inverse is now stored in m. Everytime when we call cacheSolve(a) the inverse stored 
 ## in m is returned without having to compute the inverse. 
 ## if a new matrix is assigned to makeCacheMatrix, m is reset to null & so when cacheSolve(a) is 
-## called it will again computed the inverse and assigned it to m.
+## called it will again compute the inverse and assigned it to m.
 ## a$setmatrix will set an inverse value which will alwayed be returned by cacheSolve as the value
 ## from a$setmatrix is assigned to m. But whenever a new matrix is created with makeCacheMatrix the
 ## value of m is again set to null & the new inverse is calculated by cacheSolve and assigned to m.
